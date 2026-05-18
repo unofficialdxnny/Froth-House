@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Morocco Shisha Lounge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <span class="brand-text">Oasis</span>
+                <span class="brand-dot">.</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="menu.html" class="nav-link">Menu</a></li>
+                <li><a href="about.html" class="nav-link">The Experience</a></li>
+                <li><a href="locations.html" class="nav-link">Locations</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="signin.html" class="btn btn-ghost" id="nav-auth-btn">Sign In</a>
+                <a href="book.html" class="btn btn-primary">Book a Table</a>
+            </div>
+            <button class="mobile-toggle" aria-label="Toggle Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="page-header" style="padding-top: 150px; text-align: center; margin-bottom: 2rem;">
+        <div class="section-container">
+            <h1 style="font-size: 3.5rem; color: #FFF; margin-bottom: 1rem; font-weight: 300; text-transform: uppercase;">Contact <span style="color: var(--color-accent-hover);">Us</span></h1>
+            <p style="color: var(--color-text-secondary); font-size: 1.2rem; max-width: 600px; margin: 0 auto;">Have a question about our menu, an upcoming event, or a large booking? Drop us a message.</p>
+        </div>
+    </div>
+
+    <section class="booking-section">
+        <div class="section-container" style="max-width: 900px; display: grid; grid-template-columns: 1fr; gap: 3rem;">
+            
+            <div style="background: var(--color-card-bg); padding: 3rem; border: 1px solid var(--color-border);">
+                <form class="booking-form" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 200px;">
+                            <label style="display: block; margin-bottom: 0.5rem; color: var(--color-text-secondary); font-size: 0.9rem;">Full Name</label>
+                            <input type="text" class="form-input" placeholder="Enter your name" required>
+                        </div>
+                        <div style="flex: 1; min-width: 200px;">
+                            <label style="display: block; margin-bottom: 0.5rem; color: var(--color-text-secondary); font-size: 0.9rem;">Email Address</label>
+                            <input type="email" class="form-input" placeholder="Enter your email" required>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label style="display: block; margin-bottom: 0.5rem; color: var(--color-text-secondary); font-size: 0.9rem;">Subject</label>
+                        <select class="form-input">
+                            <option>General Inquiry</option>
+                            <option>Large Party Booking (10+)</option>
+                            <option>Private Events</option>
+                            <option>Feedback</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label style="display: block; margin-bottom: 0.5rem; color: var(--color-text-secondary); font-size: 0.9rem;">Message</label>
+                        <textarea class="form-input" rows="5" placeholder="How can we help you today?" required></textarea>
+                    </div>
+
+                    <button type="button" class="btn btn-primary" style="width: 100%; padding: 1rem; font-size: 1.1rem; margin-top: 1rem;">Send Message</button>
+                </form>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center; padding-top: 2rem; border-top: 1px dashed rgba(212,175,55,0.2);">
+                <div>
+                    <h3 style="color: var(--color-accent-hover); margin-bottom: 0.5rem; font-weight: 400; text-transform: uppercase;">Call Us</h3>
+                    <p style="color: var(--color-text-primary);">+44 20 7946 0958</p>
+                </div>
+                <div>
+                    <h3 style="color: var(--color-accent-hover); margin-bottom: 0.5rem; font-weight: 400; text-transform: uppercase;">Email Us</h3>
+                    <p style="color: var(--color-text-primary);">hello@midnightoasis.co.uk</p>
+                </div>
+                <div>
+                    <h3 style="color: var(--color-accent-hover); margin-bottom: 0.5rem; font-weight: 400; text-transform: uppercase;">Find Us</h3>
+                    <p style="color: var(--color-text-primary);">616 Washwood Heath Rd<br>Birmingham B8 2HG</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="section-container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="nav-brand" style="color: #fff;">
+                    <span class="brand-text">Oasis</span>
+                    <span class="brand-dot">.</span>
+                </a>
+                <p>Your late-night sanctuary for premium shisha and great company.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="locations.html">Locations</a></li>
+                    <li><a href="book.html">Book a Table</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Visit Us</h4>
+                <p>616 Washwood Heath Rd<br>Ward End, Birmingham B8 2HG</p>
+                <p>Mon-Thu: 4pm - 12am<br>Fri-Sun: 2pm - 2am</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Morocco Shisha Lounge. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Experience | The Midnight Oasis</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <span class="brand-text">Oasis</span>
+                <span class="brand-dot">.</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="menu.html" class="nav-link">Shisha & Drinks</a></li>
+                <li><a href="about.html" class="nav-link active">The Experience</a></li>
+                <li><a href="locations.html" class="nav-link">Locations</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="signin.html" class="btn btn-ghost" id="nav-auth-btn">Sign In</a>
+                <a href="book.html" class="btn btn-primary">Book a Table</a>
+            </div>
+            <button class="mobile-toggle" aria-label="Toggle Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header" style="padding-top: 150px; text-align: center; margin-bottom: 2rem;">
+        <div class="section-container">
+            <h1 style="font-size: 3.5rem; color: #FFF; margin-bottom: 1rem;">The <span class="text-accent">Experience</span></h1>
+            <p style="color: var(--color-text-secondary); font-size: 1.2rem; max-width: 600px; margin: 0 auto;">Step into a world of sensory delights and late-night relaxation.</p>
+        </div>
+    </div>
+
+    <section class="story" style="border-top: none;">
+        <div class="section-container story-container">
+            <div class="story-content">
+                <h2>A Sanctuary for the<br>Senses</h2>
+                <p>The Midnight Oasis was conceived as a getaway from the bustling city streets, bringing the rich traditions of a Moroccan tea house directly to you. From the moment you walk in, you are greeted by the warm glow of traditional mosaic lamps and the subtle aroma of premium shisha.</p>
+                <p>We pride ourselves on using only the highest grade tobacco and coconut coals. Our "shisha sommeliers" are always on hand to help you craft the perfect flavor mix, while our kitchen prepares authentic Moroccan mint tea and traditional treats like Baklava.</p>
+                <p>Whether you're celebrating a special occasion or just needing a place to decompress, experience true Moroccan hospitality with us.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="section-container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="nav-brand" style="color: #fff;">
+                    <span class="brand-text">Oasis</span>
+                    <span class="brand-dot">.</span>
+                </a>
+                <p>Your late-night sanctuary for premium shisha and great company.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Shisha & Drinks</a></li>
+                    <li><a href="locations.html">Locations</a></li>
+                    <li><a href="book.html">Book a Table</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Visit Us</h4>
+                <p>616 Washwood Heath Rd<br>Ward End, Birmingham B8 2HG</p>
+                <p>Mon-Thu: 4pm - 12am<br>Fri-Sun: 2pm - 2am</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Midnight Oasis. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/auth.js"></script>
+</body>
+</html>

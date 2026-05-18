@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Morocco Shisha Lounge</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <style>
+        .menu-page-header {
+            padding-top: 150px;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .menu-grid-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 900px) {
+            .menu-grid-layout {
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
+            }
+        }
+
+        .menu-category {
+            background: var(--color-card-bg);
+            padding: 2.5rem;
+            border: 1px solid var(--color-border);
+        }
+
+        .menu-category-title {
+            font-size: 1.5rem;
+            color: var(--color-accent-hover);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 400;
+            text-align: center;
+            border-bottom: 1px dashed rgba(212, 175, 55, 0.3);
+            padding-bottom: 1rem;
+        }
+
+        .menu-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            text-align: center;
+        }
+
+        .menu-item {
+            color: var(--color-text-primary);
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        .menu-item-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            border-bottom: 1px dotted rgba(255, 255, 255, 0.1);
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .menu-item-name {
+            color: var(--color-text-primary);
+            font-size: 1.1rem;
+            font-weight: 300;
+            text-align: left;
+        }
+
+        .menu-item-price {
+            color: var(--color-text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .menu-note {
+            text-align: center;
+            color: var(--color-text-secondary);
+            margin-top: 1.5rem;
+            font-style: italic;
+        }
+
+        .section-divider {
+            text-align: center;
+            margin: 5rem 0 3rem 0;
+        }
+
+        .section-divider h2 {
+            font-size: 2.5rem;
+            color: #FFF;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 300;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <span class="brand-text">Oasis</span>
+                <span class="brand-dot">.</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="menu.html" class="nav-link active">Shisha & Drinks</a></li>
+                <li><a href="about.html" class="nav-link">The Experience</a></li>
+                <li><a href="locations.html" class="nav-link">Locations</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="signin.html" class="btn btn-ghost" id="nav-auth-btn">Sign In</a>
+                <a href="book.html" class="btn btn-primary">Book a Table</a>
+            </div>
+            <button class="mobile-toggle" aria-label="Toggle Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="menu-page-header">
+        <div class="section-container" style="padding-bottom: 0;">
+            <h1
+                style="font-size: 3.5rem; color: #FFF; margin-bottom: 1rem; text-transform: uppercase; font-weight: 300;">
+                Our <span style="color: var(--color-accent-hover);">Menu</span></h1>
+        </div>
+    </div>
+
+    <!-- Shisha Section -->
+    <section class="menu-content" style="padding-bottom: 6rem;">
+        <div class="section-container" style="padding-top: 0;">
+
+            <div class="section-divider" style="margin-top: 0;">
+                <h2>Shisha Menu</h2>
+            </div>
+
+            <div class="menu-grid-layout">
+                <!-- Al Fakher -->
+                <div class="menu-category">
+                    <h3 class="menu-category-title">Al Fakher Flavours - £12</h3>
+                    <div class="menu-list">
+                        <span class="menu-item">Double Apple</span>
+                        <span class="menu-item">Grape</span>
+                        <span class="menu-item">Mint</span>
+                        <span class="menu-item">Watermelon</span>
+                        <span class="menu-item">Sweet Melon</span>
+                        <span class="menu-item">Orange</span>
+                        <span class="menu-item">Peach</span>
+                        <span class="menu-item">Pomegranate</span>
+                        <span class="menu-item">Kiwi</span>
+                        <span class="menu-item">Gum</span>
+                        <span class="menu-item">Bubble Gum</span>
+                        <span class="menu-item">Mango</span>
+                        <span class="menu-item">Lemon</span>
+                        <span class="menu-item">Blueberry</span>
+                        <span class="menu-item">Berry</span>
+                        <span class="menu-item">Cherry</span>
+                        <span class="menu-item">Strawberry</span>
+                        <span class="menu-item">Vanilla</span>
+                        <span class="menu-item">Coconut</span>
+                        <span class="menu-item">Qazwan</span>
+                        <span class="menu-item">Havana</span>
+                    </div>
+                </div>
+
+                <!-- Premium Flavours -->
+                <div class="menu-category">
+                    <h3 class="menu-category-title">Premium Flavours - £14</h3>
+                    <div class="menu-list">
+                        <span class="menu-item">Irn Bru</span>
+                        <span class="menu-item">Cuban Mojito</span>
+                        <span class="menu-item">Blue Mist</span>
+                        <span class="menu-item">Pink Lemonade</span>
+                        <span class="menu-item">Purple Velvet</span>
+                        <span class="menu-item">Pear Drop</span>
+                        <span class="menu-item">Frozen Apple</span>
+                        <span class="menu-item">Frozen Blueberry</span>
+                        <span class="menu-item">Frozen Lychee</span>
+                        <span class="menu-item">Frozen Mango</span>
+                        <span class="menu-item">Frozen Pineapple</span>
+                        <span class="menu-item">Frozen Passion</span>
+                        <span class="menu-item">Frozen Raspberries</span>
+                        <span class="menu-item">Frozen Lemon</span>
+                        <span class="menu-item">Pina Colada</span>
+                        <span class="menu-item">Rubicon Guava</span>
+                        <span class="menu-item">Red Skittles</span>
+                        <span class="menu-item">Raspberry</span>
+                        <span class="menu-item">Lady Killer</span>
+                        <span class="menu-item">Green Ice Pop</span>
+                        <span class="menu-item">Love 66</span>
+                        <span class="menu-item">Paan</span>
+                        <span class="menu-item">Moscow</span>
+                    </div>
+                </div>
+
+                <!-- House Specials & Premium Mix -->
+                <div class="menu-category">
+                    <h3 class="menu-category-title">House Specials - £14</h3>
+                    <div class="menu-list" style="margin-bottom: 2rem;">
+                        <span class="menu-item">Morocco Nites</span>
+                        <span class="menu-item">Morocco Special</span>
+                        <span class="menu-item">VIP Mix</span>
+                        <span class="menu-item">Special Mix</span>
+                        <span class="menu-item">Havana</span>
+                        <span class="menu-item">Cindy Mix</span>
+                    </div>
+
+                    <h3 class="menu-category-title">Premium Mix</h3>
+                    <div class="menu-list">
+                        <span class="menu-item">Frozen lemon, Cuban mojito</span>
+                        <span class="menu-item">Frozen apple, raspberry</span>
+                        <span class="menu-item">Irn-Bru, Skittles</span>
+                        <span class="menu-item">Irn-Bru, Skittles, Rubicon guava</span>
+                        <span class="menu-item">Pear drops, raspberry, Love 66</span>
+                        <span class="menu-item">Irn-Bru, Cuban mojito</span>
+                        <span class="menu-item">Love 66, Lady Killer</span>
+                        <span class="menu-item">Frozen blueberry, raspberry</span>
+                        <span class="menu-item">Frozen blueberry, lychee</span>
+                        <span class="menu-item">Frozen blueberry, raspberry, lychee</span>
+                        <span class="menu-item">Frozen blueberry, raspberry, Love 66</span>
+                        <span class="menu-item">Love 66, lychee</span>
+                        <span class="menu-item">Frozen apple, Irn-Bru, Skittles</span>
+                    </div>
+                </div>
+            </div>
+            <p class="menu-note">Ice Pipe Available for £1 extra</p>
+
+            <!-- Drinks Section -->
+            <div class="section-divider">
+                <h2>Drinks</h2>
+            </div>
+
+            <div class="menu-grid-layout">
+                <div class="menu-category">
+                    <h3 class="menu-category-title">Cans</h3>
+                    <div class="menu-item-row"><span class="menu-item-name">Redbull</span><span
+                            class="menu-item-price">£2.50</span></div>
+                    <div class="menu-item-row"><span class="menu-item-name">Coke</span><span
+                            class="menu-item-price">£1.50</span></div>
+                    <div class="menu-item-row"><span class="menu-item-name">Diet Coke</span><span
+                            class="menu-item-price">£1.50</span></div>
+                    <div class="menu-item-row"><span class="menu-item-name">7UP</span><span
+                            class="menu-item-price">£1.50</span></div>
+                    <div class="menu-item-row"><span class="menu-item-name">Fanta Orange</span><span
+                            class="menu-item-price">£1.50</span></div>
+                    <div class="menu-item-row"><span class="menu-item-name">Fanta Fruit Twist</span><span
+                            class="menu-item-price">£1.50</span></div>
+                    <div class="menu-item-row"><span class="menu-item-name">Fanta Pineapple & Grapefruit</span><span
+                            class="menu-item-price">£1.50</span></div>
+                    <div class="menu-item-row"><span class="menu-item-name">Rubicon Guava</span><span
+                            class="menu-item-price">£1.50</span></div>
+                    <div class="menu-item-row"><span class="menu-item-name">Rubicon Passion</span><span
+                            class="menu-item-price">£1.50</span></div>
+                    <div class="menu-item-row"><span class="menu-item-name">Rubicon Lychee</span><span
+                            class="menu-item-price">£1.50</span></div>
+                    <div class="menu-item-row"><span class="menu-item-name">Rubicon Mango</span><span
+                            class="menu-item-price">£1.50</span></div>
+                    <div class="menu-item-row"><span class="menu-item-name">Ribena Blackcurrant</span><span
+                            class="menu-item-price">£1.50</span></div>
+                    <div class="menu-item-row"><span class="menu-item-name">Ribena Strawberry</span><span
+                            class="menu-item-price">£1.50</span></div>
+
+                    <h3 class="menu-category-title" style="margin-top: 2rem;">Bottles - £2.00</h3>
+                    <div class="menu-list">
+                        <span class="menu-item">J2O Orange Passion Fruit</span>
+                        <span class="menu-item">J2O Apple Raspberry</span>
+                        <span class="menu-item">J2O Apple Mango</span>
+                        <span class="menu-item">Appletiser</span>
+                        <span class="menu-item">Ribena Blackcurrant</span>
+                        <span class="menu-item">Ribena Strawberry</span>
+                        <span class="menu-item">Coke Bottle</span>
+                    </div>
+                </div>
+
+                <div class="menu-category">
+                    <h3 class="menu-category-title">Mocktails & Fresh Juices - £5.00</h3>
+                    <div class="menu-list">
+                        <span class="menu-item">Lime Mocktail</span>
+                        <span class="menu-item">Strawberry Mocktail</span>
+                        <span class="menu-item">Mojito Mocktail</span>
+                        <span class="menu-item">Royal Blue</span>
+                        <span class="menu-item">Pina Colada</span>
+                        <span class="menu-item">Mexican Tiger</span>
+                        <span class="menu-item">Fresh Orange Juice</span>
+                        <span class="menu-item">Fresh Lemon Juice</span>
+                    </div>
+
+                    <h3 class="menu-category-title" style="margin-top: 2rem;">Milkshakes - £5.00</h3>
+                    <div class="menu-list">
+                        <span class="menu-item">Strawberry</span>
+                        <span class="menu-item">Vanilla</span>
+                        <span class="menu-item">Chocolate</span>
+                        <span class="menu-item">Oreo</span>
+                        <span class="menu-item">Galaxy</span>
+                        <span class="menu-item">Ferrero Rocher</span>
+                        <span class="menu-item">Snickers</span>
+                        <span class="menu-item">Mars</span>
+                        <span class="menu-item">Aero Mint</span>
+                        <span class="menu-item">Kinder Bueno</span>
+                        <span class="menu-item">KitKat</span>
+                        <span class="menu-item">Banana</span>
+                    </div>
+                </div>
+
+                <div class="menu-category">
+                    <h3 class="menu-category-title">Teas & Coffees</h3>
+                    <h4 style="color: var(--color-text-secondary); text-align: center; margin-bottom: 1rem;">Teas -
+                        £2.00</h4>
+                    <div class="menu-list" style="margin-bottom: 1.5rem;">
+                        <span class="menu-item">English Tea</span>
+                        <span class="menu-item">Moroccan Mint Tea</span>
+                        <span class="menu-item">Green Tea</span>
+                        <span class="menu-item">Desi Tea</span>
+                        <span class="menu-item">Kurdish Tea</span>
+                        <span class="menu-item">Arabic Tea</span>
+                        <span class="menu-item">Ginger Tea</span>
+                    </div>
+
+                    <h4 style="color: var(--color-text-secondary); text-align: center; margin-bottom: 1rem;">Tea Pots
+                    </h4>
+                    <div class="menu-item-row"><span class="menu-item-name">Arabic Tea Pot</span><span
+                            class="menu-item-price">£5.00</span></div>
+                    <div class="menu-item-row"><span class="menu-item-name">English Tea Pot</span><span
+                            class="menu-item-price">£5.00</span></div>
+                    <div class="menu-item-row"><span class="menu-item-name">Kurdish Tea Pot</span><span
+                            class="menu-item-price">£5.00</span></div>
+                    <div class="menu-item-row"><span class="menu-item-name">Green Tea Pot</span><span
+                            class="menu-item-price">£5.00</span></div>
+                    <div class="menu-item-row"><span class="menu-item-name">Desi Tea Pot</span><span
+                            class="menu-item-price">£6.00</span></div>
+                    <div class="menu-item-row"><span class="menu-item-name">Moroccan Mint Tea Pot</span><span
+                            class="menu-item-price">£5.00</span></div>
+
+                    <h4
+                        style="color: var(--color-text-secondary); text-align: center; margin-bottom: 1rem; margin-top: 1.5rem;">
+                        Coffees - £3.00</h4>
+                    <div class="menu-list">
+                        <span class="menu-item">Americano</span>
+                        <span class="menu-item">Latte</span>
+                        <span class="menu-item">Hot Chocolate</span>
+                        <span class="menu-item">Cappuccino</span>
+                        <span class="menu-item">Espresso</span>
+                        <span class="menu-item">Iced Latte</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Food Section -->
+            <div class="section-divider">
+                <h2>Food & Desserts</h2>
+            </div>
+
+            <div class="menu-grid-layout">
+                <div class="menu-category">
+                    <h3 class="menu-category-title">Food - £6.00</h3>
+                    <p class="menu-note" style="margin-top: 0; margin-bottom: 1rem;">(All meals include 1 can of drink)
+                    </p>
+                    <div class="menu-list">
+                        <span class="menu-item">Cheeseburger Meal</span>
+                        <span class="menu-item">Chicken Fillet Burger Meal</span>
+                        <span class="menu-item">Grilled Chicken Burger Meal</span>
+                        <span class="menu-item">Zinger Burger Meal</span>
+                        <span class="menu-item">Double Burger Meal</span>
+                        <span class="menu-item">Chicken Strips Meal</span>
+                        <span class="menu-item">Fries</span>
+                    </div>
+                </div>
+
+                <div class="menu-category">
+                    <h3 class="menu-category-title">Cakes - £5.00</h3>
+                    <div class="menu-list" style="margin-bottom: 2rem;">
+                        <span class="menu-item">Milk Cake</span>
+                        <span class="menu-item">Red Velvet</span>
+                        <span class="menu-item">Fudge Cake</span>
+                        <span class="menu-item">Oreo Cheesecake</span>
+                        <span class="menu-item">Ferrero Cheesecake</span>
+                        <span class="menu-item">Lotus Cheesecake</span>
+                    </div>
+
+                    <h3 class="menu-category-title">Classic Desserts</h3>
+                    <div class="menu-item-row"><span class="menu-item-name">Concrete Cake and Custard</span><span
+                            class="menu-item-price">£5.00</span></div>
+                    <div class="menu-item-row"><span class="menu-item-name">Small Baklava</span><span
+                            class="menu-item-price">£1.50</span></div>
+                    <div class="menu-item-row"><span class="menu-item-name">Triangle Baklava with Ice Cream</span><span
+                            class="menu-item-price">£5.00</span></div>
+                    <div class="menu-item-row"><span class="menu-item-name">Fruit Platter</span><span
+                            class="menu-item-price">£8.00</span></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="section-container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="nav-brand" style="color: #fff;">
+                    <span class="brand-text">Oasis</span>
+                    <span class="brand-dot">.</span>
+                </a>
+                <p>Your late-night sanctuary for premium shisha and great company.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="locations.html">Locations</a></li>
+                    <li><a href="book.html">Book a Table</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Visit Us</h4>
+                <p>616 Washwood Heath Rd<br>Ward End, Birmingham B8 2HG</p>
+                <p>Mon-Thu: 4pm - 12am<br>Fri-Sun: 2pm - 2am</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Midnight Oasis. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/auth.js"></script>
+</body>
+
+</html>

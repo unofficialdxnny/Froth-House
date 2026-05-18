@@ -1,0 +1,55 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="site-map" name="Morocco Shisha Lounge Site Map">
+    <mxGraphModel dx="1174" dy="882" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="home" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C25E3E;fontColor=#ffffff;strokeColor=#D4AF37;strokeWidth=2;" value="&lt;b&gt;index.html&lt;/b&gt;&lt;br&gt;Home" vertex="1">
+          <mxGeometry height="60" width="120" x="370" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="menu" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#271A15;fontColor=#F4EBE1;strokeColor=#D4AF37;strokeWidth=2;" value="&lt;b&gt;menu.html&lt;/b&gt;&lt;br&gt;Menu" vertex="1">
+          <mxGeometry height="60" width="120" x="60" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="about" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#271A15;fontColor=#F4EBE1;strokeColor=#D4AF37;strokeWidth=2;" value="&lt;b&gt;about.html&lt;/b&gt;&lt;br&gt;The Experience" vertex="1">
+          <mxGeometry height="60" width="120" x="190" y="525" as="geometry" />
+        </mxCell>
+        <mxCell id="locations" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#271A15;fontColor=#F4EBE1;strokeColor=#D4AF37;strokeWidth=2;" value="&lt;b&gt;locations.html&lt;/b&gt;&lt;br&gt;Locations" vertex="1">
+          <mxGeometry height="60" width="120" x="290" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="book" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#271A15;fontColor=#F4EBE1;strokeColor=#D4AF37;strokeWidth=2;" value="&lt;b&gt;book.html&lt;/b&gt;&lt;br&gt;Book a Table" vertex="1">
+          <mxGeometry height="60" width="120" x="450" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="contact" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#271A15;fontColor=#F4EBE1;strokeColor=#D4AF37;strokeWidth=2;" value="&lt;b&gt;contact.html&lt;/b&gt;&lt;br&gt;Contact Us" vertex="1">
+          <mxGeometry height="60" width="120" x="620" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="signin" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1B120F;fontColor=#F4EBE1;strokeColor=#C25E3E;strokeWidth=2;" value="&lt;b&gt;signin.html&lt;/b&gt;&lt;br&gt;Sign In" vertex="1">
+          <mxGeometry height="60" width="120" x="530" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="signup" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1B120F;fontColor=#F4EBE1;strokeColor=#C25E3E;strokeWidth=2;" value="&lt;b&gt;signup.html&lt;/b&gt;&lt;br&gt;Sign Up" vertex="1">
+          <mxGeometry height="60" width="120" x="680" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="home" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#D4AF37;strokeWidth=2;" target="menu">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="home" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#D4AF37;strokeWidth=2;" target="about">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="home" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#D4AF37;strokeWidth=2;" target="locations">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="home" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#D4AF37;strokeWidth=2;" target="book">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="home" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#D4AF37;strokeWidth=2;" target="contact">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="home" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#D4AF37;strokeWidth=2;" target="signin">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="signin" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#D4AF37;strokeWidth=2;" target="signup">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
